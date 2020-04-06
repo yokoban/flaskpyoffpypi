@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>require {{name}}</title>
+</head>
+
+<body>
+    <h1>{{name}} require package list</h1>
+    <table>
+        <tr>
+            <th>package name</th>
+            <th>version</th>
+            <th>link</th>
+        </tr>
+        {% for package in packages %}
+        <tr>
+            <td>{{package.name}}</td>
+            <td>{{package.ver}}</td>
+            <td><a href={{package.link}} target='_blank'>{{package.link}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <body>
+
+</html>
