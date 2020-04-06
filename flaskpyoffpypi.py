@@ -1,8 +1,9 @@
 import json
+import os
 import re
 
 import requests
-from flask import Flask, Response, jsonify, make_response, request, render_template
+from flask import Flask, Response, jsonify, make_response, render_template, request
 
 app = Flask(__name__)
 
@@ -114,8 +115,4 @@ def off_pypi(name):
 
 
 if __name__ == "__main__":
-    host = "0.0.0.0"
-    port = 41256
-
-    app.debug = False
-    app.run(host=host, port=port)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
