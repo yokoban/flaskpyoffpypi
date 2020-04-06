@@ -115,7 +115,7 @@ def off_pypi(name):
 
 if __name__ == "__main__":
     host = "0.0.0.0"
-    port = 80
+    port = 5000
 
     app.debug = False
     app.run(host=host, port=port)
